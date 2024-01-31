@@ -1,0 +1,13 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    web-application-type: none
+  application:
+    name: hello-world
+  # temporal specific configs (default to local development)
+  temporal:
+    workersAutoDiscovery:
+      packages: io.temporal.springboot.example.hello
+    namespace: default
+    connection:
+      target: 127.0.0.1:7233
