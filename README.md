@@ -52,6 +52,7 @@ temporal workflow start \
 Build the docker container by running the following command: 
 
 ```shell
+./gradlew clean build
 ./buildcontainer.sh 
 ```
 
