@@ -1,4 +1,4 @@
-# Temporal Spring Boot Hello
+# Temporal Spring Boot Console Hello
 The purpose of this example is to demonstrate how to run a simple workflow using the 
 [Temporal Spring Boot Autoconfigure](https://github.com/temporalio/sdk-java/tree/master/temporal-spring-boot-autoconfigure-alpha)
 using a Spring Boot Console application. This is a simple way to get started. One drawback is that you cannot 
@@ -6,9 +6,19 @@ expose [SDK Metrics](https://docs.temporal.io/dev-guide/java/observability), whi
 
 If you want an example that exposes SDK Metrics, you can find one [here](https://github.com/temporalio/samples-java/tree/main/springboot) and another one [here](https://github.com/rross/temporal-cloud-run/tree/main/app).  
 
-This example also demonstrates how to run locally, running within a Docker container, and in [Temporal Cloud](https://temporal.io/cloud)
+This example also demonstrates how to run workers
+* on your laptop accessing Temporal running locally 
+* on your laptop accessing [Temporal Cloud](https://temporal.io/cloud)
+* in a Docker container accessing Temporal running locally
+* in a Docker container accessing [Temporal Cloud](https://temporal.io/cloud)
 
-Within the application, there is another Spring Boot Console application that can start a new workflow. 
+Within the application, there is another Spring Boot Console application that can start a new workflow.
+
+## Prerequisites
+* [Temporal CLI](https://docs.temporal.io/cli#install)
+* Java SDK
+* Optionally [Docker](https://docs.docker.com/engine/install/)
+* Optionally [Temporal Cloud namespace](https://pages.temporal.io/get-cloud)
    
 ## Running Locally
 Start Temporal Server locally
@@ -90,9 +100,3 @@ temporal workflow start \
   --input '{ "name": "First LastName"}' \
   --env dev
 ```
-
-
-
-
-
-
