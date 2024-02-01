@@ -46,6 +46,11 @@ bootJar {
     enabled = true
 }
 
+bootRun {
+    mainClass = 'io.temporal.springboot.example.hello.StartTheWorker'
+    enabled = true
+}
+
 jar {
     enabled = false
 }
